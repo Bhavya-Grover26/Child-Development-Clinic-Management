@@ -1,0 +1,18 @@
+﻿staff_id,staff_name,staff_email,staff_dept,staff_sal,staff_joining_date
+S001,Aarav Gupta,aaravgupta@gmail.com,Admin,67000,2017-11-02
+S002,Divya Singh,divyasingh@gmail.com,HR,20000,2018-02-14
+S003,Kavita Arora,kavita arora@gmail.com,Finance,45000,2019-01-09
+S004,Krish Grover,krish grover@gmail.com,HR,22500,2020-10-12
+S005,Shreya Kamath,shreya kamath@gmail.com,IT,50000,2018-02-26
+S006,Nishtha Chaitalia ,nishtha chaitalia @gmail.com,Admin,63000,2021-04-19
+S007,Sparsh Patel,sparsh patel@gmail.com,IT,37000,2023-04-01
+S008,Naman Jain,naman jain@gmail.com,Finance,54200,2019-08-27
+S009,Rishika Shetty,rishika shetty@gmail.com,Marketing,34500,2019-09-20
+S010,Shaurya Gupta,shaurya gupta@gmail.com,Operations,66000,2021-09-09
+S011,Heena Firdouz,heena firdouz@gmail.com,Finance,53400,2017-07-08
+S012,Sashwat Karwa,sashwat karwa@gmail.com,Admin,99000,2017-10-26
+S013,Ananya Sajjala ,ananya sajjala @gmail.com,Marketing,34500,2019-05-21
+S014,Dhruv Shah,dhruv shah@gmail.com,HR,60000,2021-12-11
+S015,Mana Malhotra ,mana malhotra @gmail.com,IT,52500,2018-09-09
+S016,Dishant Nair,dishant nair@gmail.com,Operations,65000,2022-09-12
+S017,Tanirika Dutta,tanirika dutta@gmail.com,Marketing,45000,2020-01-05
