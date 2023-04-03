@@ -1,0 +1,72 @@
+<style>
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .col-left {
+        flex: 1;
+        margin-right: 20px;
+    }
+    
+    .col-left h2 {
+        color: #3cc2db;
+      }
+    
+    .col-right {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: left;
+    }
+    
+    h2 {
+        font-size: 36px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    
+    p {
+        font-size: 18px;
+        line-height: 1.5;
+        color: #555;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    </style>
+</style>
+
+<!DOCTYPE html>
+{% include "navbar.html" %}
+<html>
+<head>
+	<title>Home </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-left">
+				<h2>Welcome To New Horizons Child Development Center</h2>
+				<p>New Horizons Child Development Centre, introduced for the first time in India the concept and practice of self-funded inter-disciplinary, measurable and outcome based rehabilitation where each child gets individual evaluation and intervention in a comprehensive, scientifically planned and documented manner. </p>
+			</div>
+			<div class="col-right">
+				<img src="https://www.linkpicture.com/q/Screenshot-2023-04-02-232059.png" alt="About Us Image">
+                
+			</div>
+		</div>
+	</div>
+</body>
+</html>

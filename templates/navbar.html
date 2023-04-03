@@ -1,0 +1,124 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  top: -50px;
+  height: 107px;
+  background-color: #ffffff;
+  color: #3c74db; /* Set the font color */
+  justify-content: space-between; /* Align items to right */
+  font-family: Arial, sans-serif; /* Change font family */
+}
+
+.nav-links li a {
+  color: #3c74db; /* Set the link color */
+  font-family: Arial, sans-serif; /* Change font family */
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  height: 100%;
+  font-family: Arial, sans-serif; /* Change font family */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  font-family: Arial, sans-serif;
+  justify-content: flex-end; /* Align items to right */
+  margin-right: 20px;
+}
+
+.nav-links li {
+  list-style: none;
+  margin-right: 70px;
+}
+
+.nav-links li a {
+  color: #3cc2db;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: Arial, sans-serif; /* Change font family */
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    top: 70px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .nav-links li {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .burger {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+
+</style>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<nav>
+    <div class="navbar">
+        <a href="/home" class="logo">
+            
+            <img src="https://www.linkpicture.com/q/image-removebg-preview_36.png" alt="New Horizons Logo">
+          </a>
+          <ul class="nav-links">
+            <li><a href="/home"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="/programs"><i class="fa fa-gears"></i>Programs</a></li>
+            <li><a href="/patient"><i class="fa fa-heartbeat	"></i>Patient</a></li>
+          </ul>
+          
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </div>
+  </nav>
+  

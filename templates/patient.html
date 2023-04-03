@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+{% include "navbar.html" %}
+
+<style>
+  /* Global styles */
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    margin-top: 50px;
+    color: #3cc2db;
+    
+  }
+  
+  /* Table styles */
+  table {
+    margin: 50px auto;
+    border-collapse: collapse;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
+  thead {
+    background-color: #3cc2db;
+    color: #fff;
+  }
+  
+  th {
+    padding: 10px;
+    font-weight: bold;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  tbody tr:hover {
+  background-color: #e5f0f8;
+}
+  
+  td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Form styles */
+  form {
+    margin: 50px auto;
+    width: 80%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f4f4f4;
+  }
+  
+  button[type=submit] {
+    background-color: #3cc2db;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  button[type=submit]:hover {
+    background-color: #008080;
+  }
+</style>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patients</title>
+</head>
+<body>
+    <h1>Patients</h1>
+
+    <h2>View Patients</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Patient ID</th>
+                <th>Patient Name</th>
+                <th>Date of Birth</th>
+                <th>Sex</th>
+                <th>Address</th>
+                <th>Total Duration</th>
+                <th>Patient Status</th>
+                <th>Staff ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for patients in patient %}
+            <tr>
+                <td>{{ patients.patient_id }}</td>
+                <td>{{ patients.patient_name }}</td>
+                <td>{{ patients.patient_dob }}</td>
+                <td>{{ patients.patient_sex }}</td>
+                <td>{{ patients.patient_address }}</td>
+                <td>{{ patients.total_duration }}</td>
+                <td>{{ patients.patient_status }}</td>
+                <td>{{ patients.staff_id }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Add New Patient</h2>
+    <form method="POST" action="/add_patient">
+        <label for="patient_id">Patient ID:</label>
+        <input type="text" id="patient_id" name="patient_id" required><br>
+
+        <label for="patient_name">Patient Name:</label>
+        <input type="text" id="patient_name" name="patient_name" required><br>
+
+        <label for="patient_dob">Date of Birth (yyyy-mm-dd):</label>
+        <input type="date" id="patient_dob" name="patient_dob" required><br>
+
+        <label for="patient_sex">Sex:</label>
+        <select id="patient_sex" name="patient_sex" required>
+            <option value="M">M</option>
+            <option value="F">F</option>
+        </select><br>
+
+        <label for="patient_address">Address:</label>
+        <textarea id="patient_address" name="patient_address" rows="3" required></textarea><br>
+
+        <label for="total_duration">Total Duration:</label>
+        <input type="number" id="total_duration" name="total_duration" required><br>
+
+        <label for="patient_status">Patient Status:</label>
+        <select id="patient_status" name="patient_status" required>
+            <option value="existing">Existing</option>
+            <option value="new">New</option>
+            <option value="dropout">Dropout</option>
+        </select><br>
+
+        <label for="staff_id">Staff ID:</label>
+        <input type="text" id="staff_id" name="staff_id" required><br>
+
+        <button type="submit">Add Patient</button>
+    </form>
+
+</body>
+</html>
+

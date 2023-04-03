@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Programs</title>
+</head>
+<body>
+	<table>
+		<tr>
+            <th>Program Name</th>
+			<th>Month 1</th>
+			<th>Month 2</th>
+			<th>Month 3</th>
+			<th>Program Cost</th>
+			<th>Installment 1</th>
+			<th>Installment 2</th>
+			<th>Program Code</th>
+		</tr>
+	{% for program in programs %}
+		<tr>
+            <td>{{ program.program_name }}</td>
+			<td>{{ program.month1 }}</td>
+			<td>{{ program.month2 }}</td>
+			<td>{{ program.month3 }}</td>
+			<td>{{ program.program_cost }}</td>
+			<td>{{ program.install1 }}</td>
+			<td>{{ program.install2 }}</td>
+			<td>{{ program.program_code }}</td>
+		</tr>
+	{% endfor %}
+	</table>
+    <form method="POST" action="{{ url_for('add_program') }}">
+        <label for="program_code">Program Name:</label>
+        <input type="text" id="program_name" name="program_name" required>
+
+        <label for="month1">1st month:</label>
+        <input type="text" id="month1" name="month1" required>
+
+        <label for="month2">2nd month:</label>
+        <input type="text" id="month2" name="month2" required>
+
+        <label for="month3">3rd month:</label>
+        <input type="text" id="month3" name="month3" required>
+
+        <label for="program_cost">Program Cost:</label>
+        <input type="number" id="program_cost" name="program_cost" required>
+      
+        <label for="install1">Installment 1:</label>
+        <input type="number" id="install1" name="install1" required>
+      
+        <label for="install2">Installment 2:</label>
+        <input type="number" id="install2" name="install2">
+
+        <label for="program_code">Program Code:</label>
+        <input type="text" id="program_code" name="program_code" required>
+      
+        <button type="submit">Update Program</button>
+      </form>
+      
+</body>
+</html>
